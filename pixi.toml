@@ -1,0 +1,14 @@
+[workspace]
+authors = ["秋雨落 <i@rain.cx>"]
+channels = ["conda-forge", "nvidia"]
+name = "Retrieval-based-Voice-Conversion-WebUI"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "==3.10"
+pip = "==24.0"
+cuda = "==11.8"
+vs2022_win-64 = ">=19.43.34604,<20"
