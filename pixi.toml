@@ -1,0 +1,21 @@
+[workspace]
+authors = ["秋雨落 <i@rain.cx>"]
+channels = ["conda-forge"]
+name = "Retrieval-based-Voice-Conversion-WebUI"
+platforms = ["win-64", "linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "==3.9"
+pip = "==24.0"
+
+[target.win-64.dependencies]
+vs2022_win-64 = ">=19.43.34604,<20"
+
+[target.linux-64.dependencies]
+#cuda = "11.8"
+[pypi-dependencies]
+#torch = { version = ">=2.5.1", index = "https://download.pytorch.org/whl/cu118" }
+#torchvision = { version = ">=0.20.1", index = "https://download.pytorch.org/whl/cu118" }
