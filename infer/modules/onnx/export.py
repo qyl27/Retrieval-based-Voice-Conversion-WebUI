@@ -1,7 +1,7 @@
 import torch
-import onnxsim
-import onnx
+
 from infer.lib.infer_pack.models_onnx import SynthesizerTrnMsNSFsidM
+
 
 def export_onnx(ModelPath, ExportedPath):
     cpt = torch.load(ModelPath, map_location="cpu")
@@ -44,11 +44,9 @@ def export_onnx(ModelPath, ExportedPath):
             "rnd": [2],
         },
         do_constant_folding=False,
-        opset_version=18,
+        opset_version=13,
         verbose=False,
         input_names=input_names,
         output_names=output_names,
     )
-    model, _ = onnxsim.simplify(ExportedPath)
-    onnx.save(model, ExportedPath)
     return "Finished"

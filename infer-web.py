@@ -95,6 +95,7 @@ if torch.cuda.is_available() or ngpu != 0:
                 "T4",
                 "TITAN",
                 "4060",
+                "5060",
                 "L",
                 "6000",
             ]
